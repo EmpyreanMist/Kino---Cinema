@@ -1,0 +1,17 @@
+{
+  "name": "kino---cinema",
+  "version": "1.0.0",
+  "description": "test again",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "sass src/sections/main.scss main.css",
+    "sass:watch": "sass --watc src/sections/main.scss main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
