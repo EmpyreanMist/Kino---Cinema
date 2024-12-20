@@ -1,3 +1,22 @@
-$backgroundColor: #0E0E1B;
-$buttonColor: #175DCC;
-$textColor: #FFFFFF;
+$backgroundColor: #0e0e1b;
+$buttonColor: #175dcc;
+$textColor: #ffffff;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", serif;
+}
+
+.skiReviewerSection {
+  background-color: $backgroundColor;
+  width: 100vw;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skiReviewer {
+  width: 25vw;
+  border-radius: 20%;
+}

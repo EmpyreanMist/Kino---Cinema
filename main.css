@@ -1,3 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", serif;
+}
 
+.skiReviewerSection {
+  background-color: #0e0e1b;
+  width: 100vw;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skiReviewer {
+  width: 25vw;
+  border-radius: 20%;
+}
 
 /*# sourceMappingURL=main.css.map */
