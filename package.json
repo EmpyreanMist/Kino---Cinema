@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "test again",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "sass:compile": "sass src/sections/main.scss main.css",
     "sass:watch": "sass --watch src/sections/main.scss main.css",
