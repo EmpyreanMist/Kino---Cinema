@@ -24,3 +24,4 @@ const array = [
 
 // create cards from all the elements in an array.
 movieCard.createMovieCardsFromArray(array, figureCard);
+movieCard.clickEventMovieModal();
