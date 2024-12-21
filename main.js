@@ -1,4 +1,4 @@
-import { movies } from './getMovies.js';
+import { movies } from "./getMovies.js";
 
 // reads json file to diffrent arrays in movie objects.
 movies.getAllMovies();

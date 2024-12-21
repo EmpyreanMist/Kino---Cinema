@@ -1,0 +1,51 @@
+{
+  "liveEvents": [
+    {
+      "id": "event1",
+      "title": "Rock Night",
+      "image": "../pictures/rock.png",
+      "description": "Lokala rockband spelar hela natten lång hos Kino!",
+      "times": ["2025-01-15 20:00", "2025-03-22 20:00", "2025-08-03 20:00"]
+    },
+    {
+      "id": "event2",
+      "title": "Alpina VM",
+      "image": "../pictures/alpineWorldChampionships.png",
+      "description": "Se de alpina världsmästerskapet live hos Kino!",
+      "times": ["2024-10-13 15:00", "2025-10-13 15:00", "2026-10-13 14:00"]
+    },
+    {
+      "id": "event3",
+      "title": "Vasaloppet",
+      "image": "../pictures/vasaloppet.png",
+      "description": "Se de fantastiska vasaloppet live hos Kino!",
+      "times": ["2025-03-02 08:00", "2026-03-02 08:00"]
+    },
+    {
+      "id": "event4",
+      "title": "Musik Quiz",
+      "image": "../pictures/musicQuiz.png",
+      "description": "Kom och tävla hos Kinos musik quiz, olika teman varje gång och fina presentkort till vinster.",
+      "times": [
+        "2024-12-28 17:00",
+        "2025-01-05 17:00",
+        "2025-02-06 17:00",
+        "2025-06-12 17:00",
+        "2025-08-15 17:00"
+      ]
+    },
+    {
+      "id": "event5",
+      "title": "Godisregn",
+      "image": "../pictures/vasaloppet.png",
+      "description": "Barnens favorit, godisregn! Bamse kommer även på besök.",
+      "times": [
+        "2025-12-02 16:30",
+        "2026-03-02 16:30",
+        "2026-06-02 16:30",
+        "2026-09-02 16:30",
+        "2026-12-02 16:30"
+      ]
+    }
+  ]
+}
