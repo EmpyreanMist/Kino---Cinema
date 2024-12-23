@@ -88,3 +88,60 @@ header {
     height: 100%;
 
 }
+
+/* moviecontent layout */
+.movieContent {
+  display: grid;
+  grid-template-rows: 10% 30% % 60%;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  
+  margin-top: 2rem;
+
+  color: $textColor;
+}
+
+/* where the exit form movie modal should be */
+.exitContainer {
+  height: 40px;
+  width: 100%;
+}
+
+.mediaWrapper {
+  grid-row-start: 2;
+  display: flex;
+  width: 100%;
+
+  margin-bottom: 5rem;
+
+  .movieTrailer {
+    width: 60%;
+    height: 100%;
+  }
+
+  .movieImg {
+    width: 40%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+}
+
+.movieInfoBox {
+  grid-row-start: 3;
+  display: flex;
+  gap: 2rem;
+  height: 520px;
+
+  .leftColumn {
+    width: 40%;
+    flex-shrink: 0;
+  }
+
+  .right-column{
+    width: calc(60% - 2rem);
+  }
+}
+
