@@ -2,6 +2,13 @@ $backgroundColor: #0e0e1b;
 $buttonColor: #175dcc;
 $textColor: #ffffff;
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
 header {
   background-color: $backgroundColor;
   padding: 1rem;
@@ -60,14 +67,10 @@ header {
   }
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Roboto", serif;
-}
 
 .skiReviewerSection {
   background-color: $backgroundColor;
+  color: #FFFFFF;
   width: 100vw;
   display: flex;
   padding-top: 30px;
@@ -87,4 +90,113 @@ header {
     width: 100%;
     height: 100%;
 
+    overflow-y: auto;
 }
+
+.exitBtn {
+  color: white;
+  font-size: 50px;
+  display: block;
+  position: relative;
+
+  float: right;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+/* moviecontent layout */
+.movieContent {
+  display: grid;
+  grid-template-rows: 10% 30% % 60%;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  
+  margin-top: 2rem;
+
+  color: $textColor;
+}
+
+.mediaWrapper {
+  grid-row-start: 2;
+  display: flex;
+  width: 100%;
+
+  gap: 2rem;
+
+  margin-bottom: 5rem;
+
+  .movieTrailer {
+    width: 60%;
+    height: 100%;
+  }
+
+  .movieImg {
+    width: calc(40% - 2rem);
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+}
+
+.movieInfoBox {
+  grid-row-start: 3;
+  display: flex;
+  gap: 2rem;
+  height: 520px;
+
+  .leftColumn {
+    width: 40%;
+    flex-shrink: 0;
+
+    .modalBtn {
+      display: block;
+      margin: 2rem 0;
+    }
+
+    .extraInfo {
+      border: 1px solid rgba(181,204,245,.1);
+      padding: 45px 40px;
+
+      .leftHeader {
+        font-size: 1.5rem;
+
+        padding-bottom: 1rem;
+      }
+
+      .listHeader {
+        font-size: 1rem;
+        padding: 0.2rem 0;
+        color: #d3dae2;
+
+        opacity: 0.5;
+      }
+
+      .listInfo {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .rightColumn{
+    width: calc(60% - 2rem);
+    
+    .rightTitle {
+      font-size: 2.5rem;
+      padding: 2rem 0;
+    }
+
+    .descriptionContainer {
+      p {
+        font-size: 1.25rem;
+
+        line-height: 1.5;
+      }
+    }
+  }
+}
+

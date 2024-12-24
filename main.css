@@ -1,3 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
 header {
   background-color: #0e0e1b;
   padding: 1rem;
@@ -49,14 +56,9 @@ header .searchBar .searchBtn {
   cursor: pointer;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Roboto", serif;
-}
-
 .skiReviewerSection {
   background-color: #0e0e1b;
+  color: #FFFFFF;
   width: 100vw;
   display: flex;
   padding-top: 30px;
@@ -75,6 +77,91 @@ header .searchBar .searchBtn {
   top: 0px;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
+}
+
+.exitBtn {
+  color: white;
+  font-size: 50px;
+  display: block;
+  position: relative;
+  float: right;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+/* moviecontent layout */
+.movieContent {
+  display: grid;
+  grid-template-rows: 10% 30%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.mediaWrapper {
+  grid-row-start: 2;
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+.mediaWrapper .movieTrailer {
+  width: 60%;
+  height: 100%;
+}
+.mediaWrapper .movieImg {
+  width: calc(40% - 2rem);
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.movieInfoBox {
+  grid-row-start: 3;
+  display: flex;
+  gap: 2rem;
+  height: 520px;
+}
+.movieInfoBox .leftColumn {
+  width: 40%;
+  flex-shrink: 0;
+}
+.movieInfoBox .leftColumn .modalBtn {
+  display: block;
+  margin: 2rem 0;
+}
+.movieInfoBox .leftColumn .extraInfo {
+  border: 1px solid rgba(181, 204, 245, 0.1);
+  padding: 45px 40px;
+}
+.movieInfoBox .leftColumn .extraInfo .leftHeader {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.movieInfoBox .leftColumn .extraInfo .listHeader {
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  color: #d3dae2;
+  opacity: 0.5;
+}
+.movieInfoBox .leftColumn .extraInfo .listInfo {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+.movieInfoBox .rightColumn {
+  width: calc(60% - 2rem);
+}
+.movieInfoBox .rightColumn .rightTitle {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+}
+.movieInfoBox .rightColumn .descriptionContainer p {
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=main.css.map */
