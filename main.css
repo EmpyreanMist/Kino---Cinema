@@ -57,6 +57,7 @@ header .searchBar .searchBtn {
 
 .skiReviewerSection {
   background-color: #0e0e1b;
+  color: #FFFFFF;
   width: 100vw;
   display: flex;
   padding-top: 30px;
@@ -75,6 +76,15 @@ header .searchBar .searchBtn {
   top: 0px;
   width: 100%;
   height: 100%;
+}
+
+.exitBtn {
+  color: white;
+  font-size: 50px;
+  display: inline;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -68,6 +68,7 @@ header {
 
 .skiReviewerSection {
   background-color: $backgroundColor;
+  color: #FFFFFF;
   width: 100vw;
   display: flex;
   padding-top: 30px;
@@ -86,5 +87,13 @@ header {
     top: 0px;
     width: 100%;
     height: 100%;
+}
 
+.exitBtn {
+  color: white;
+  font-size: 50px;
+  display: inline;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
