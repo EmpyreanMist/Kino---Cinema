@@ -1,0 +1,62 @@
+{
+  "liveEvents": [
+    {
+      "id": "event1",
+      "title": "Rock Night",
+      "image": "../pictures/rock.png",
+      "description": "Lokala rockband spelar hela natten lång hos Kino!",
+      "times": [
+        { "date": "2025-01-15", "time": "20:00" },
+        { "date": "2025-03-22", "time": "20:00" },
+        { "date": "2025-08-03", "time": "20:00" }
+      ]
+    },
+    {
+      "id": "event2",
+      "title": "Alpina VM",
+      "image": "../pictures/alpineWorldChampionships.png",
+      "description": "Se de alpina världsmästerskapet live hos Kino!",
+      "times": [
+        { "date": "2024-10-13", "time": "15:00" },
+        { "date": "2025-10-13", "time": "15:00" },
+        { "date": "2026-10-13", "time": "14:00" }
+      ]
+    },
+    {
+      "id": "event3",
+      "title": "Vasaloppet",
+      "image": "../pictures/vasaloppet.png",
+      "description": "Se de fantastiska vasaloppet live hos Kino!",
+      "times": [
+        { "date": "2025-03-02", "time": "08:00" },
+        { "date": "2026-03-02", "time": "08:00" }
+      ]
+    },
+    {
+      "id": "event4",
+      "title": "Musik Quiz",
+      "image": "../pictures/musicQuiz.png",
+      "description": "Kom och tävla hos Kinos musik quiz, olika teman varje gång och fina presentkort till vinster.",
+      "times": [
+        { "date": "2024-12-28", "time": "17:00" },
+        { "date": "2025-01-05", "time": "17:00" },
+        { "date": "2025-02-06", "time": "17:00" },
+        { "date": "2025-06-12", "time": "17:00" },
+        { "date": "2025-08-15", "time": "17:00" }
+      ]
+    },
+    {
+      "id": "event5",
+      "title": "Godisregn",
+      "image": "../pictures/vasaloppet.png",
+      "description": "Barnens favorit, godisregn! Bamse kommer även på besök.",
+      "times": [
+        { "date": "2025-12-02", "time": "16:30" },
+        { "date": "2026-03-02", "time": "16:30" },
+        { "date": "2026-06-02", "time": "16:30" },
+        { "date": "2026-09-02", "time": "16:30" },
+        { "date": "2026-12-02", "time": "16:30" }
+      ]
+    }
+  ]
+}
