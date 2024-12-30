@@ -55,3 +55,8 @@ let released = movies.released;
 let upcoming = movies.upcoming;
 console.log(released);
 console.log(upcoming);
+
+document.getElementsByClassName("allMoviesBtn").addEventListener("click", function() {
+    window.location.href = "moviesPage.html"; 
+  });
+  
