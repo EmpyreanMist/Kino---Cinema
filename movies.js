@@ -6,15 +6,14 @@
 const movieCard = {
     movieInformationArray: [],
     /**
-     * 
+     *
      * @param {*} movieId Will be used to append full information about the movie later.
      * @param {*} url The url that should be added to image element. (should be read from json).
      * @param {*} title The title to the card. Should be read from json.
      * @param {*} addMovieCardTo Which element the moviecard should be appended to.
      */
 
-    createMovieCard (movieId, url, title, addMovieCardTo) {
-
+    createMovieCard(movieId, url, title, addMovieCardTo) {
         // create wrapper to contain moviecard
         const movieWrapper = document.createElement('article');
         movieWrapper.id = movieId;
@@ -63,7 +62,7 @@ const movieCard = {
      * @param {*} array Information to load data from.
      */
 
-    createMovieCardsFromArray (array, appendMovieCardTo) {
+    createMovieCardsFromArray(array, appendMovieCardTo) {
         array.forEach(element => {
             this.createMovieCard(element.id, element.image, element.title, appendMovieCardTo);
         });
@@ -74,7 +73,7 @@ const movieCard = {
      * Function to create clickevent to open movieModal
      * @param {*} movieArray Array to find all the information that matches the id from. 
      */
-    clickEventMovieModal (movieArray) {
+    clickEventMovieModal(movieArray) {
         const section = document.querySelectorAll('article.movieWrapper');
 
         section.forEach(movieCard => {
@@ -116,7 +115,7 @@ const movieCard = {
     /**
      * Function to exit the movie modal by removing it from the DOM.
      */
-    exitMovieModal (movieModal) {
+    exitMovieModal(movieModal) {
         // Remove the movie modal from the DOM
         movieModal.remove();
     },
@@ -125,7 +124,7 @@ const movieCard = {
      * @param {*} idValue To get info from specific movie.
      * @param {*} searchArray The array which to filter from when getting the information.
      */
-    getInfoToMovieModal (idValue, searchArray) {
+    getInfoToMovieModal(idValue, searchArray) {
         // sort array with correct info about specific movie into array
         const modalMovie = searchArray.filter((movie) => movie.id == idValue);
 
@@ -134,10 +133,10 @@ const movieCard = {
         this.appendInfoMovieModal(this.movieInformationArray);
     },
     /**
-     * Funciton to append information to modal box with.
+     * Function to append information to modal box with.
      * @param {*} infoArray Array to read information from.
      */
-    appendInfoMovieModal (infoArray) {
+    appendInfoMovieModal(infoArray) {
         // movie content
         const movieContent = document.createElement('article');
         movieContent.classList.add('movieContent');
@@ -200,10 +199,8 @@ const movieCard = {
 
         // Release
         const releaseHeader = document.createElement('dt');
-        console.log(`${infoArray[0].releaseYear}`);
         releaseHeader.classList.add('listHeader');
         releaseHeader.innerHTML = 'Premiär:';
-        /* release.innerHTML = `${infoArray[0].releaseYear}`; */
 
         const releaseDesc = document.createElement('dd');
         releaseDesc.classList.add('listInfo');
@@ -211,10 +208,8 @@ const movieCard = {
 
         // Runtime
         const runtimeHeader = document.createElement('dt');
-        console.log(`${infoArray[0].releaseYear}`);
         runtimeHeader.classList.add('listHeader');
         runtimeHeader.innerHTML = 'Speltid:';
-        /* release.innerHTML = `${infoArray[0].releaseYear}`; */
 
         const runDesc = document.createElement('dd');
         runDesc.classList.add('listInfo');
@@ -231,7 +226,6 @@ const movieCard = {
 
         // Actors
         const actorHeader = document.createElement('dt');
-        console.log(`${infoArray[0].releaseYear}`);
         actorHeader.classList.add('listHeader');
         actorHeader.innerHTML = 'Skådespelare:';
 
@@ -241,7 +235,6 @@ const movieCard = {
 
         //Title
         const titleHeader = document.createElement('dt');
-        console.log(`${infoArray[0].releaseYear}`);
         titleHeader.classList.add('listHeader');
         titleHeader.innerHTML = 'Titel:';
 
@@ -251,13 +244,36 @@ const movieCard = {
 
         //Genre
         const genreHeader = document.createElement('dt');
-        console.log(`${infoArray[0].releaseYear}`);
         genreHeader.classList.add('listHeader');
         genreHeader.innerHTML = 'Genre:';
 
         const genreDesc = document.createElement('dd');
         genreDesc.classList.add('listInfo');
         genreDesc.innerHTML = infoArray[0].genre;
+
+        // Append toggle content to extraInfo
+        const toggleContent = document.createElement('div');
+        toggleContent.classList.add('toggleContent');
+
+        toggleContent.append(actorHeader, actorDesc, titleHeader, titleDesc, genreHeader, genreDesc);
+
+        // Append show more/less button
+        const toggleButton = document.createElement('button');
+        toggleButton.classList.add('toggleButton');
+        toggleButton.innerHTML = 'Show more';
+
+        toggleButton.addEventListener('click', () => {
+            if (toggleContent.style.display === 'none' || toggleContent.style.display === '') {
+                toggleContent.style.display = 'block';
+                toggleButton.innerHTML = 'Show less';
+            } else {
+                toggleContent.style.display = 'none';
+                toggleButton.innerHTML = 'Show more';
+            }
+        });
+
+        // Hide toggle content by default
+        toggleContent.style.display = 'none';
 
         // append to info content
         infoList.append(releaseHeader);
@@ -271,22 +287,11 @@ const movieCard = {
         infoList.append(directorHeader);
         infoList.append(directorDesc);
 
-        //Actor append
-        infoList.append(actorHeader);
-        infoList.append(actorDesc);
-
-        //Title append
-        infoList.append(titleHeader);
-        infoList.append(titleDesc);
-
-        //GenreAppend
-        infoList.append(genreHeader);
-        infoList.append(genreDesc);
-
         // append to extraInfo
         extraInfo.append(headerInfo);
         extraInfo.append(infoList);
-
+        extraInfo.append(toggleContent);
+        extraInfo.append(toggleButton);
 
         // append to left column info
         leftInfo.append(movieBtn);
@@ -331,7 +336,7 @@ const movieCard = {
      * @param {*} minuteStr Takes argument in the format of (xxx min)
      * @returns {*} String in the form of "hours timme minutes minuter".
      */
-    minutesToHoursConverter (minuteStr) {
+    minutesToHoursConverter(minuteStr) {
         // Extract minutes from string
         const minutes = parseInt(minuteStr.split(' ')[0], 10);
 
@@ -342,6 +347,5 @@ const movieCard = {
         return `${hours} timme ${min} minuter`;
     }
 };
-
 
 export { movieCard };
