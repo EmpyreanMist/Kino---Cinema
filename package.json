@@ -7,7 +7,8 @@
   "scripts": {
     "sass:compile": "sass src/sections/main.scss main.css",
     "sass:watch": "sass --watch src/sections/main.scss main.css",
-    "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
