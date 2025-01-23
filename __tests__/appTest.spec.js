@@ -24,4 +24,11 @@ describe("API Tests", () => {
     expect(response.status).toBe(404); // Förväntar sig en 404 kod
     expect(response.text).toContain("Movie not found!"); // Kollar att texten finns på sidan
   });
+
+  //Testar att moviesPage sidan laddas
+  it("Should return the MoviesPage correctly", async () => {
+    const response = await request(app).get("/moviesPage");
+    expect(response.status).toBe(200);
+    expect(response.text).toContain("Movie production companies we work with");
+  });
 });
