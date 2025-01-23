@@ -3,6 +3,8 @@ import path from "path";
 import morgan from "morgan";
 import fetch from "node-fetch";
 import { marked } from "marked";
+import { TextDecoder } from "util";
+global.TextDecoder = TextDecoder;
 
 const app = express();
 const port = 5080;
@@ -68,6 +70,11 @@ app.get("/moviesPage", (req, res) => {
 });
 
 // Startar servern
-app.listen(port, () => {
-  console.log(`The server is running on http://localhost:${port}`);
-});
+
+if (process.env.NODE_ENV !== "test") {
+  app.listen(port, () => {
+    console.log(`The server is running on http://localhost:${port}`);
+  });
+}
+
+export default app;

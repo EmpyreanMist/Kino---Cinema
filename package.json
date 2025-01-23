@@ -1,31 +1,35 @@
 {
   "name": "kino---cinema",
   "version": "1.0.0",
-  "description": "test again",
-  "main": "main.js",
+  "description": "Cinema website with server-side rendering and tests",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "sass:compile": "sass src/sections/main.scss main.css",
     "sass:watch": "sass --watch src/sections/main.scss main.css",
     "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "author": "",
   "license": "ISC",
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "transform": {}
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "sass": "^1.83.0"
+    "sass": "^1.83.0",
+    "supertest": "^7.0.0"
   },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "marked": "^15.0.6",
     "morgan": "^1.10.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "text-encoding": "^0.7.0"
   }
 }
